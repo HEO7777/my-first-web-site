@@ -7,19 +7,22 @@
             function nightDayHandler(self) {
                 var a_lst = document.querySelectorAll('a');
                 var i = 0;
-                var target = document.querySelector('body').style;
+                var body = document.querySelector('body');
+                var actBeam = document.querySelector("#ActBeam");
                 if (self.value === 'night') {
-                    target.backgroundColor = 'black';
-                    target.color = 'white';
+                    body.style.backgroundColor = 'black';
+                    body.style.color = 'white';
                     self.value = 'day';
+                    actBeam.style.borderColor = "white";
                     while (i < a_lst.length) {
                         a_lst[i].style.color = 'powderblue';
                         i++;
                     }
                 } else {
-                    target.backgroundColor = 'white';
-                    target.color = 'black';
+                    body.style.backgroundColor = 'white';
+                    body.style.color = 'black';
                     self.value = 'night';
+                    actBeam.style.borderColor = "black";
                     while (i < a_lst.length) {
                         a_lst[i].style.color = 'blue';
                         i++;
@@ -51,7 +54,7 @@
     </head>
     <body>
         <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
-        <div onclick="alert('까꿍!!!!!!!!!!!!!!!!!!')">
+        <div id="ActBeam" onclick="alert('까꿍!!!!!!!!!!!!!!!!!!')">
                 액션 빔!!
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
