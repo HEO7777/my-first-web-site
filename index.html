@@ -3,6 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>PlayGround</title>
+        <script>
+            function nightDayHandler(self) {
+                var a_lst = document.querySelectorAll('a');
+                var i = 0;
+                var target = document.querySelector('body').style;
+                if (self.value === 'night') {
+                    target.backgroundColor = 'black';
+                    target.color = 'white';
+                    self.value = 'day';
+                    while (i < a_lst.length) {
+                        a_lst[i].style.color = 'powderblue';
+                        i++;
+                    }
+                } else {
+                    target.backgroundColor = 'white';
+                    target.color = 'black';
+                    self.value = 'night';
+                    while (i < a_lst.length) {
+                        a_lst[i].style.color = 'blue';
+                        i++;
+                    }
+                }
+            }
+        </script>
         <style>
             @keyframes example {
                 0%   {background-color:red; left:0px; top:0px;}
@@ -26,16 +50,12 @@
         </style>
     </head>
     <body>
+        <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
         <div onclick="alert('까꿍!!!!!!!!!!!!!!!!!!')">
-            <h>
                 액션 빔!!
-            </h>
         </div>
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="vilage.html">떡잎마을</a><br>
+        <a href="kindergarten.html">떡잎유치원</a>
     </body>
 </html>
