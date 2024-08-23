@@ -2,63 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>PlayGround</title>
-        <script>
-            function nightDayHandler(self) {
-                var a_lst = document.querySelectorAll('a');
-                var i = 0;
-                var body = document.querySelector('body');
-                var actBeam = document.querySelector("#ActBeam");
-                if (self.value === 'night') {
-                    body.style.backgroundColor = 'black';
-                    body.style.color = 'white';
-                    self.value = 'day';
-                    actBeam.style.borderColor = "white";
-                    while (i < a_lst.length) {
-                        a_lst[i].style.color = 'powderblue';
-                        i++;
-                    }
-                } else {
-                    body.style.backgroundColor = 'white';
-                    body.style.color = 'black';
-                    self.value = 'night';
-                    actBeam.style.borderColor = "black";
-                    while (i < a_lst.length) {
-                        a_lst[i].style.color = 'blue';
-                        i++;
-                    }
-                }
-            }
-        </script>
-        <style>
-            @keyframes example {
-                0%   {background-color:red; left:0px; top:0px;}
-                25%  {background-color:yellow; left:200px; top:0px;}
-                50%  {background-color:blue; left:200px; top:200px;}
-                75%  {background-color:green; left:0px; top:200px;}
-                100% {background-color:red; left:0px; top:0px;}
-            }
-            div {
-                position: relative;
-                border: 5px solid black;
-                width: 100px;
-                height: 100px;
-                align-content: center;
-                text-align: center;
-                font-size: 25px;
-                border-radius: 10px;
-                animation: example 1.5s infinite;
-                animation-direction: alternate;
-            }
-        </style>
+        <title>PROGRAMMING</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="interaction.js"></script>
     </head>
-    <body>
-        <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
-        <div id="ActBeam" onclick="alert('까꿍!!!!!!!!!!!!!!!!!!')">
-                액션 빔!!
+    <body onload="cat_ready();">
+        <h1>Programming</h1>
+        <div id="cat_grid">
+            <ol>&#60;Category&#62;
+                <li>Web</li>
+                <li>Application</li>
+                <li>Game</li>
+                <li>AI</li>
+            </ol>
+            <div>
+                <div class="cat_div" onclick="cat_rot(this);"> &#60;</div>
+                <div class="cat_div" onclick="cat_rot(this);"> &#60;</div>
+                <div class="cat_div" onclick="cat_rot(this);"> &#60;</div>
+                <div class="cat_div" onclick="cat_rot(this);"> &#60;</div>
+            </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <a href="vilage.html">떡잎마을</a><br>
-        <a href="kindergarten.html">떡잎유치원</a>
     </body>
 </html>

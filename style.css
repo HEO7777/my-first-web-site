@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+ol {
+    size: auto;
+    width: 15%;
+}
+.cat_div {
+    width: 10px;
+    transition: rotate 1s;
+}
+#cat_grid {
+    display: grid;
+    grid-template-columns: 15% 10px;
+}
